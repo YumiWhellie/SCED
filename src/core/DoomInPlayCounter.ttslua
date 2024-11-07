@@ -48,7 +48,7 @@ function toggleSubtractDoom(override)
   end
 
   -- early exit if nothing was changed
-  if previousState == subtractDoom then return previousState end
+  if previousState == subtractDoom then return end
 
   updateSave()
 
@@ -57,6 +57,7 @@ function toggleSubtractDoom(override)
   else
     printToAll("Doom in play: Add to the total doom count.", "Orange")
   end
+  return previousState
 end
 
 -- main function
